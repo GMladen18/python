@@ -5,3 +5,4 @@ gosho
 misho
 asd
 stamat
+loko
