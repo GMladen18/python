@@ -6,3 +6,5 @@ misho
 asd
 stamat
 loko
+koko
+boko
