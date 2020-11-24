@@ -4,7 +4,7 @@ from time import sleep
 from pyspectator.processor import Cpu
 
 
-def generate_report(duration: timedelta):
+def create_report(duration: timedelta):
     measurements = []
     cpu = Cpu(monitoring_latency=0.01)
     with cpu:
