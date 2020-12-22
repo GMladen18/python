@@ -1,0 +1,25 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <value>
+          <list size="0" />
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="ticket_mania.student_percent" />
+          <option value="ticket_mania.standard_percent" />
+          <option value="ticket_mania.kid_percent" />
+          <option value="ticket_mania.*" />
+          <option value="football_cards.team_a" />
+          <option value="str.__neg__" />
+          <option value="typing._SpecialForm.__setitem__" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
