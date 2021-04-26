@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{%load static %}
+
+
+<title>{% block title%}Home Page{% endblock %}</title>
+
+{% block css_path %}{% static 'css/home.css' %}{%endblock%}
+{% block js_path %}{% static 'js/home.js'%}{%endblock%}
+
+{%block main_container%}
+<div class="main">
+    <div>
+        <h1>Are You Hungry ?</h1>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <h1 class="menu-title col-12 ">Menu</h1>
+        <hr class="md-2 mt-2">
+
+        
+    </div>
+
+</div>
+{%endblock%}

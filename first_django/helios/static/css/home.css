@@ -1,0 +1,57 @@
+
+
+.main {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.main div {
+    top: 50%;
+    position: absolute;
+    background-image: url(../img/cooking.jpg);
+    background-size: 1800px 830px;
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
+    background-position: -15vw 30%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    z-index: 1;
+    animation: moving 10s 10;
+    animation-delay: 2s;
+
+}
+
+.main h1{
+    color: rgb(235, 88, 88) ;
+    font-family: "Source Serif Pro",Georgia,Times,serif;
+    font-size: 64px !important;
+    font-weight: 1000 !important;
+    text-align: center;
+    -ms-transform: translateY(250%);
+    transform: translateY(250%);
+
+}
+
+
+@keyframes moving {
+    0% {}
+    50% {
+        background-position: Calc(-15vw - 10px) 100%;
+    }
+}
+
+
+.menu-title{
+    text-align: center;
+    color: rgb(235, 88, 88) ;
+    font-family: "Source Serif Pro",Georgia,Times,serif;
+}
+
+hr{
+    box-shadow: 2px;
+
+}
+

@@ -1,0 +1,24 @@
+.row{
+    justify-content: space-around;
+}
+.card{
+    margin-top:50px;
+}
+
+h3 {
+    display:inline;
+}
+
+.card{
+    cursor: pointer;
+
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-img-top{
+    max-height: 22vh;
+    border-radius: 50%;
+}

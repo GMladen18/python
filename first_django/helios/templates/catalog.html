@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{%load static %}
+
+
+<title>{% block title%}Home Page{% endblock %}</title>
+
+{% block css_path %}{% static 'css/catalog.css' %}{%endblock%}
+{% block js_path %}{% static 'js/catalog.js'%}{%endblock%}
+
+{%block main_container%}
+<div class="container">
+    <div class="row">
+        {% for i in food %}
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static i.image.url %}" class="card-img-top" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title d-grid gap-2 col-6 mx-auto">{{i.title}}</h5>
+                    <!-- <p class="card-text d-grid gap-2 col-6 mx-auto">{{i.description}}</p> -->
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="button">{{i.price|floatformat:2}} lv.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{%endblock%}
