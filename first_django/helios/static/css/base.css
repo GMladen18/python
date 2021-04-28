@@ -1,19 +1,21 @@
-
-body{
+body {
     background-image: url(../img/f74ad3c34ea0fbe29d4773f9c1890b53.jpg);
 }
-.nav-link{
+
+.nav-link {
     font-size: 24px;
     font-weight: 700;
-    color: rgb(48,4,60)!important;
+    color: rgb(48, 4, 60)!important;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-.nav-item{
+.nav-item {
     padding-right: 24px;
 }
 
-
-
-
-
-
+footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: 20px;
+}

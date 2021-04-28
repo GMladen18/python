@@ -7,3 +7,4 @@ class Food(models.Model):
     image = models.ImageField(upload_to='img')
     description = models.CharField(max_length=200, blank=True, null=True)
     price = models.FloatField()
+    is_promo = models.BooleanField(default=False)

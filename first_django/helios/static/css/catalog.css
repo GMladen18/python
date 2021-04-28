@@ -1,24 +1,30 @@
-.row{
+.row {
     justify-content: space-around;
 }
-.card{
-    margin-top:50px;
+
+h1 {
+    text-align: center;
+    color: rgb(48,4,60)!important;
+    
+}
+
+.card {
+    margin-top: 50px;
 }
 
 h3 {
-    display:inline;
+    display: inline;
 }
 
-.card{
+.card {
     cursor: pointer;
-
+    background-image: url(../img/f74ad3c34ea0fbe29d4773f9c1890b53.jpg);
 }
 
-.card-body{
+.card-body {
     text-align: center;
 }
 
-.card-img-top{
+.card-img-top {
     max-height: 22vh;
-    border-radius: 50%;
 }

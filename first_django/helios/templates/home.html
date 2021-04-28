@@ -7,7 +7,9 @@
 {% block css_path %}{% static 'css/home.css' %}{%endblock%}
 {% block js_path %}{% static 'js/home.js'%}{%endblock%}
 
+
 {%block main_container%}
+
 <div class="main">
     <div>
         <h1>Are You Hungry ?</h1>
@@ -18,11 +20,53 @@
 
 <div class="container">
     <div class="row">
-        <h1 class="menu-title col-12 ">Menu</h1>
+        <h1 class="menu-title col-12 ">PROMOS</h1>
         <hr class="md-2 mt-2">
 
-        
-    </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for i in food %}
+                    {% if i.is_promo%}
+                        <div class="swiper-slide slide" style="background-image: url({%static  i.image%})">
+                            <div class="slider-content">
+                                <h1>{{i.title}}</h1>
+                                <p>{{i.description}}</p>
+                                <button type="button" class="btn btn-warning btn-lg ">Take It</button>
+                            </div>
+                        </div>
+                    {%endif%}
+                {% endfor %}
 
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
 </div>
+
+
+<script type="module">
+    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+    let swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+
+
 {%endblock%}

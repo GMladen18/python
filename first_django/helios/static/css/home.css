@@ -1,9 +1,6 @@
-
-
 .main {
     height: 70vh;
     width: 100%;
-    position: relative;
     margin-bottom: 50px;
 }
 
@@ -11,7 +8,7 @@
     top: 50%;
     position: absolute;
     background-image: url(../img/cooking.jpg);
-    background-size: 1800px 830px;
+    background-size: 2000px 1030px;
     overflow: hidden;
     height: 70vh;
     width: 100%;
@@ -21,20 +18,17 @@
     z-index: 1;
     animation: moving 10s 10;
     animation-delay: 2s;
-
 }
 
-.main h1{
-    color: rgb(235, 88, 88) ;
-    font-family: "Source Serif Pro",Georgia,Times,serif;
+.main h1 {
+    color: rgb(235, 88, 88);
+    font-family: "Source Serif Pro", Georgia, Times, serif;
     font-size: 64px !important;
     font-weight: 1000 !important;
     text-align: center;
     -ms-transform: translateY(250%);
     transform: translateY(250%);
-
 }
-
 
 @keyframes moving {
     0% {}
@@ -43,15 +37,62 @@
     }
 }
 
-
-.menu-title{
+.menu-title {
     text-align: center;
-    color: rgb(235, 88, 88) ;
-    font-family: "Source Serif Pro",Georgia,Times,serif;
+    color: rgb(235, 88, 88);
+    font-family: "Source Serif Pro", Georgia, Times, serif;
 }
 
-hr{
+@media only screen and (max-width: 600px) {
+    .main{
+        display: none;
+    }
+}
+
+hr {
     box-shadow: 2px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.slide{
+    background-size:    1400px 600px;
+}
+
+.slider-content{
+    color: white;
+    font-size:  50px;
+    font-weight: 800;
+}
+.slider-content h1{
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 1000px) {
+    .slide{
+        background-size:    1000px 420px;
+    }
 
 }
+
 
