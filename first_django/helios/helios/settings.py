@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'helios_admin',
     'food',
-    'helios_admin'
+    'accounts',
 ]
 
 MIDDLEWARE = [

@@ -25,7 +25,13 @@ def catalog_view(request, *args, **kwargs):
     }
     return render(request, 'catalog.html', context)
 
+def price_view(request, *args, **kwargs):
+    food = Food.objects.all()
 
-# class UsersListView(ListView):
-#     model = User
-#     template_name = 'home.html'
+    context = {
+        'food': food,
+    }
+    return render(request, 'price.html', context)
+
+
+

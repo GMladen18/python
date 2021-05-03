@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%load static %}
+
+
+<title>{% block title%}Login Page{% endblock %}</title>
+
+
+{% block main_container%}
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" name="Submit Button">
+</form>
+{%endblock%}
+
+<!-- <form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type="submit" name="Create User">
+
+<form> -->

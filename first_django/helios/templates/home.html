@@ -26,15 +26,15 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 {% for i in food %}
-                    {% if i.is_promo%}
-                        <div class="swiper-slide slide" style="background-image: url({%static  i.image%})">
-                            <div class="slider-content">
-                                <h1>{{i.title}}</h1>
-                                <p>{{i.description}}</p>
-                                <button type="button" class="btn btn-warning btn-lg ">Take It</button>
-                            </div>
-                        </div>
-                    {%endif%}
+                {% if i.is_promo%}
+                <div class="swiper-slide slide" style="background-image: url({%static  i.image%})">
+                    <div class="slider-content">
+                        <h1>{{i.title}}</h1>
+                        <p>{{i.description}}</p>
+                        <button type="button" class="btn btn-warning btn-lg ">Take It</button>
+                    </div>
+                </div>
+                {%endif%}
                 {% endfor %}
 
 
@@ -48,6 +48,59 @@
     </div>
 </div>
 
+<section class="about-us">
+    <div class="container">
+        <div class="row">
+            <h1 class="menu-title col-12 ">About Us</h1>
+            <hr class="md-2 mt-2">
+            <div class="col-sm-8 col-md-4 col-lg-4 ">
+                <div class="icons">
+                    <i class="fas fa-award fa-5x"></i>
+                </div>
+                <p>
+                    Our values include providing fair wages for workers, giving back to the communities we work with,
+                    and
+                    serving great food.
+                </p>
+            </div>
+            <div class="col-sm-8 col-md-4 col-lg-4 ">
+                <div class="icons">
+                    <i class="fas fa-balance-scale fa-5x"></i>
+                </div>
+                <p>
+                    Our mission is to share our family’s authentic Bulgarian recipes with the world.
+                </p>
+            </div>
+            <div class="col-sm-8 col-md-4 col-lg-4 ">
+                <div class="icons">
+                    <i class="fab fa-black-tie fa-5x"></i>
+                </div>
+                <p>
+                    Our mission is to inspire healthier communities by connecting people to real food.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  class="adress">
+    <div class="container">
+        <div class="row">
+            <h1 class="menu-title col-12 ">Find Us Here!</h1>
+            <hr class="md-2 mt-2">
+            <iframe class="google-map"
+                src="https://maps.google.com/maps?q=dragalevtsi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+
+
 
 <script type="module">
     import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
@@ -56,6 +109,10 @@
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

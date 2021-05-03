@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%load static %}
+
+{% block css_path %}{% static 'css/register.css' %}{%endblock%}
+<title>{% block title%}Register Page{% endblock %}</title>
+
+
+{% block main_container%}
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" name="Submit Button">
+</form>
+{%endblock%}
+
