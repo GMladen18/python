@@ -17,6 +17,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    
     path('', include('food.urls')),
     path('', include('helios_admin.urls')),
     path('', include('accounts.urls')),
