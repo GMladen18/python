@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to my signUp with Google Demo!</h1>
+    {%if user.is_authenticated%}
+        <h2>Hello {{user}}! Nice to meet you again!</h2>
+        <a href="accounts/logout/">LogOut!</a>
+
+    {%else%} 
+        <a href="accounts/signup/">Please sign up!</a>
+    {%endif%}
+</body>
+</html>
