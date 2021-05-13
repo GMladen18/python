@@ -24,7 +24,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid ">
-      <a class="navbar-brand" href="/home"><img src="../static/img/helios-logo-transparent-bkg.png" alt="" width="120px"
+      <a class="navbar-brand" href="/home"><img src="{% static 'img/helios-logo-transparent-bkg.png'%}" alt="" width="120px"
           height="50px"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -38,11 +38,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/catalog">Menu</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/price">Pay</a>
-          </li>
           </li>
           {%if request.user.is_authenticated%}
             <li class="nav-item">
@@ -126,9 +121,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
     integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
     crossorigin="anonymous"></script>
-  <script src="{% static 'js/base.js'%}"></script>
+  <!-- <script src="{% static 'js/base.js'%}"></script> -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="{%block js_CDN%}{%endblock%}"></script>
+  <script src="{% block js_path %}{%endblock%}" />
+
 </body>
 
 </html>

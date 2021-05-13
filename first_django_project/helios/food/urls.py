@@ -7,5 +7,5 @@ urlpatterns = [
     path('', home_view),
     path('home/', home_view),
     path('catalog/', catalog_view),
-    path('price/', price_view),
+    path('price/<int:pk>/', price_view),
 ]

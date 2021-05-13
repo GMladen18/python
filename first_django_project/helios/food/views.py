@@ -25,11 +25,11 @@ def catalog_view(request, *args, **kwargs):
     }
     return render(request, 'catalog.html', context)
 
-def price_view(request, *args, **kwargs):
-    food = Food.objects.all()
+def price_view(request,pk , *args, **kwargs):
+    product = Food.objects.get(id=pk)
 
     context = {
-        'food': food,
+        'product': product,
     }
     return render(request, 'price.html', context)
 
