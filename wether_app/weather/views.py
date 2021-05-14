@@ -30,7 +30,7 @@ def index_view(request, *args, **kwargs):
         else:
             break
            
-        temp = city_weather['main']['temp']
+        temp = city_weather['main']['temp'] - 272.15
 
         
         weather = {

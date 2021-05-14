@@ -60,7 +60,7 @@
                                     <p>
                                         <span class="title">{{ weather.city.name }}</span>
                                         <br>
-                                        <span class="subtitle">{{ weather.temperature }}° F </span>
+                                        <span class="subtitle">{{ weather.temperature|floatformat:0 }} C° </span>
                                         <br> {{ weather.description }}
                                     </p>
                                 </div>
