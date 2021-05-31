@@ -6,7 +6,7 @@ from django_auth.forms import RegistrationForm, ProfileRegistration
 # Create your views here.
 
 
-@transaction.atomic
+# @transaction.atomic
 def registration_view(request, *args, **kwargs):
     if request.method == "GET":
         context = {
@@ -24,8 +24,10 @@ def registration_view(request, *args, **kwargs):
             profile.user = user
             profile.save()
 
-            login(request, user)
-            redirect('home')
+            
+            if user:
+                login(request, user)
+                redirect('home')
 
         context = {
             'user_form': RegistrationForm(),
