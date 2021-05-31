@@ -1,0 +1,18 @@
+{%extends 'shared/base.html'%}
+
+
+{%block content%}
+{% load bootstrap4 %}
+<h1 class="text-center">Register</h1>
+<div class="d-flex justify-content-center">
+    <form action="{% url 'home'%}" method="POST" class="form" enctype="multipart/form-data">
+        {%csrf_token%}
+        {%bootstrap_form user_form%}
+        {%bootstrap_form profile_form%}
+        {%buttons%}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {%endbuttons%}
+    </form>
+</div>
+
+{%endblock%}

@@ -1,0 +1,15 @@
+{%extends 'shared/base.html'%}
+{%load static%}
+
+{% block title %}Home{%endblock%}
+
+
+{% block content %}
+{{user.email}}
+{% if user.is_authenticated %}
+<h1>Welcome, {{ user.username }}. Thanks for logging in.</h1>
+<a href="accounts/logout">LOGOUT</a>
+{% else %}
+<a href="accounts/login">Welcome, new user. Please log in.</a>
+{% endif %}
+{%endblock%}
