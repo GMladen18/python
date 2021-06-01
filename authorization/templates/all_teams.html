@@ -1,0 +1,20 @@
+{%extends 'shared/base.html'%}
+
+
+{%block content%}
+
+
+<h1 class="text-center">All Teams</h1>
+<div class="row justify-content-center">
+    <div class="col-sm-8 ">
+        <div class="row">
+
+            {%for team in teams%}
+            {%include 'shared/card_of_a_team.html' with team=team%}
+            {%endfor%}
+
+        </div>
+    </div>
+</div>
+
+{%endblock%}
